@@ -1,0 +1,368 @@
+var verifica_imagenes = '';
+$( window ).ready(function() {
+  $('body').css('overflow-x', 'hidden');
+  $('#mySidenav').css('display','block').hide();
+  //$('.home-sect').height($(window).height());
+  //$('.home-sect div').height($(window).height());
+
+
+  //$('.historia2').hide();
+  //$('.historia3').hide();
+  $('.formulario2').hide();
+  $('.formulario3').hide();
+  $('.formulario4').hide();
+  $('.formulario5').hide();
+  verifica_imagenes = setInterval(function(){ verificarImagenes() }, 3000);
+});
+
+function verificarImagenes(){
+	// Ajustes responsive
+	var comprobador=0;
+	if($('.meat-img').height()>50){
+		$('.welcome-sect').height($('.meat-img').height());
+		comprobador++;
+	}
+	if($('.map-tk').height()>50){
+		$('.location-sect').height($('.map-tk').height()+($('.map-tk').height()/6));
+		comprobador++;
+	}
+	if($('.img_horarios').height()>50){
+		$('.horarios-sect').height($('.img_horarios').height()+40);
+		$('.content_horarios-sect').css('padding-top',($('.horarios-sect').height()-$('.img_horarios').height())/2);
+		$('.horarios').height($('.img_horarios').height());
+		comprobador++;
+	}
+	/*
+	Historia vieja donde solo cambiaba los captions
+	if($('.bg-historia-img').height()>50){
+		$('.flecha_historia_right').height($('.bg-historia-img').height());
+		$('.historia-sect-back').height($('.bg-historia-img').height())
+		var hcontent_historia = ($('.bg-historia-img').height()/3);
+		$('.content_historia').css('margin-top',hcontent_historia);
+		$('.historia-sect-right').width($('.flecha_historia_right').width()/3)
+		$('.historia-sect-left img').width($('.flecha_historia_right').width()/3)
+		$('.historia-sect-right').css('padding-top',$('.bg-historia-img').height()-$('.historia-sect-right').height()-$('.historia-sect-right').height());
+		$('.historia-sect-left img').css('padding-top',$('.bg-historia-img').height()-$('.historia-sect-right').height()-$('.historia-sect-right').height());
+		comprobador++;
+	}
+	*/
+	if($('.historia_image').height()>50){
+		$('.carousel-caption-1').css('top',$('.item.active').height()/3);
+		$('.carousel-caption-3').css('top',$('.item.active').height()/8);
+		$('.carousel-caption-3').css('height',$('.item.active').height()-($('.item.active').height()/8));
+		$('.carousel-caption-3-2').css('top',$('.carousel-caption-3').height()/2);
+		$('.carousel-caption-4').css('top',($('.item.active').height()*2)/3);
+		$('.historia-sect-right').width($('.carousel-control').width()/6);
+		$('.historia-sect-left').width($('.carousel-control').width()/6);
+		$('.historia-sect-left').css('padding-top',$('.item.active').height()-($('.historia-sect-right').height()*4));
+		$('.historia-sect-right').css('padding-top',$('.item.active').height()-($('.historia-sect-right').height()*4));
+		comprobador++;
+	}
+	if(comprobador>=4){
+		clearInterval(verifica_imagenes);
+		//centrado de contenidos
+		if($('.location-sect').width()>992){
+			$('.content_direccion').css('padding-top',($('.location-sect').height()-$('.content_direccion').height())/3);
+		}else{
+			$('.content_direccion').css('padding-top',($('.location-sect').height()-$('.content_direccion').height())/3);
+		}
+		
+		$('.content_menu-sect_row').css('top',($('.menu-sect').height()-$('.content_menu-sect_row').height())/2);
+		$('.content_open-sect').css('padding-top',($('.open-sect').height()-$('.content_open-sect').height())/2);
+		$('.footer-sect').height($('.content_redes-sect').height()*5)
+		$('.content_redes-sect').css('padding-top',(($('.footer-sect').height()/2)/4));
+		//$('.content_footer2-sect').css('padding-top',( (($('.footer-sect').height()/2)-($('.content_redes-sect').height()))+ ($('.content_redes-sect').height()/5)) );
+		$('.content_footer2-sect').css('padding-top',( (($('.footer-sect').height()/2)-($('.content_redes-sect').height()))- ($('.content_redes-sect').height()/2)) );
+		$('.content_contact-sect').css('padding-top',($('.contact-sect').height()-$('.content_contact-sect').height())/3);
+		//map
+		$('.floating-map').css('top',$('.menu-sect').height()-($('.menu-sect').height()-$('.content_menu-sect_row').height())/4);
+		//Flechas de historiasect
+		//$('.historia-sect-right').width($('.flecha_historia_right').width()/3)
+		//$('.historia-sect-left img').width($('.flecha_historia_right').width()/3);
+		//espacio total de el sitio
+		//$('.wrapper-bx').height($('home-sect').height()+$('welcome-sect').height()+$('historia-sect').height()+$('menu-sect').height()+$('location-sect').height()+$('horarios-sect').height()+$('open-sect').height()+$('contact-sect').height()+$('footer-sect').height());
+		setTimeout(function(){$(window).trigger('resize')},600);
+    	setTimeout(function(){$(window).trigger('resize')},1600);
+    	setTimeout(function(){$(window).trigger('resize')},3600);
+    	setTimeout(function(){$(window).trigger('resize')},10000);
+    	setTimeout(function(){$(window).trigger('resize')},20000);
+	}
+	if($('#ot-widget-container0').width()<125){
+		//$('.content_widget_open').removeClass('col-xs-4'); 
+		//$('.content_widget_open').removeClass('col-xs-offset-4');
+		//$('.content_widget_open').addClass('col-xs-8'); 
+		//$('.content_widget_open').addClass('col-xs-offset-2');
+	}else{
+		//$('.content_widget_open').removeClass('col-xs-8'); 
+		//$('.content_widget_open').removeClass('col-xs-offset-2');
+		//$('.content_widget_open').addClass('col-xs-8'); 
+		//$('.content_widget_open').addClass('col-xs-offset-2');
+	}
+}
+
+$(document.body).on('click','.click-nav', function(ev){
+	ev.preventDefault();
+	openNav();
+})
+
+function openNav() {
+    //document.getElementById("mySidenav").style.display = "block";
+    $('#mySidenav').show();
+}
+
+$(document.body).on('click','.closebtn', function(ev){
+	ev.preventDefault();
+	closeNav();
+})
+function closeNav() {
+    //document.getElementById("mySidenav").style.display = "none";
+    $('#mySidenav').hide();
+}
+
+$(document.body).on('click','.goto', function(ev){
+	ev.preventDefault();
+	var target = $(this).attr('data-target');
+	$('html, body').animate({ 
+		scrollTop: $(target).offset().top
+	}, 1000);
+	closeNav();
+})
+
+$( window ).resize(function() {
+	//home-sect
+	$('.home-sect').height($(window).height());
+  	$('.home-sect div').height($(window).height());
+	//welcome-sect
+	$('.welcome-sect').height($('.meat-img').height());
+	//menu sect
+	$('.content_menu-sect_row').css('top',($('.menu-sect').height()-$('.content_menu-sect_row').height())/2);
+	//location-sect
+	$('.location-sect').height($('.map-tk').height()+($('.map-tk').height()/6));
+	$('.floating-map').css('top',$('.menu-sect').height()-($('.menu-sect').height()-$('.content_menu-sect_row').height())/4);
+	$('.content_direccion').css('padding-top',($('.location-sect').height()-$('.content_direccion').height())/3);
+	//horarios-sect
+	$('.horarios-sect').height($('.img_horarios').height()+40);
+	$('.horarios').height($('.img_horarios').height());
+	$('.content_horarios-sect').css('padding-top',($('.horarios-sect').height()-$('.img_horarios').height())/2);
+	//historia-sect
+	/*
+	$('.flecha_historia_right').height($('.bg-historia-img').height());
+	$('.historia-sect-back').height($('.bg-historia-img').height())
+	var hcontent_historia = ($('.bg-historia-img').height()/3);
+	$('.content_historia').css('margin-top',hcontent_historia);
+	$('.historia-sect-right').width($('.flecha_historia_right').width()/3)
+	$('.historia-sect-left img').width($('.flecha_historia_right').width()/3);
+	$('.historia-sect-right').css('padding-top',$('.bg-historia-img').height()-$('.historia-sect-right').height()-$('.historia-sect-right').height());
+	$('.historia-sect-left img').css('padding-top',$('.bg-historia-img').height()-$('.historia-sect-right').height()-$('.historia-sect-right').height());
+	*/
+	$('.carousel-caption-1').css('top',$('.item.active').height()/3);
+	$('.carousel-caption-3').css('top',$('.item.active').height()/8);
+	$('.carousel-caption-3').css('height',$('.item.active').height()-($('.item.active').height()/8));
+	$('.carousel-caption-3-2').css('top',$('.carousel-caption-3').height()/2);
+	$('.carousel-caption-4').css('top',($('.item.active').height()*2)/3);
+	$('.historia-sect-right').width($('.carousel-control').width()/6);
+	$('.historia-sect-left').width($('.carousel-control').width()/6);
+	$('.historia-sect-left').css('padding-top',$('.item.active').height()-($('.historia-sect-right').height()*4));
+	$('.historia-sect-right').css('padding-top',$('.item.active').height()-($('.historia-sect-right').height()*4));
+	//open-sect
+	if($('#ot-widget-container0').width()<125){
+		//$('.content_widget_open').removeClass('col-xs-4'); 
+		//$('.content_widget_open').removeClass('col-xs-offset-4');
+		//$('.content_widget_open').addClass('col-xs-8'); 
+		//$('.content_widget_open').addClass('col-xs-offset-2');
+	}else{
+		//$('.content_widget_open').removeClass('col-xs-8'); 
+		//$('.content_widget_open').removeClass('col-xs-offset-2');
+		//$('.content_widget_open').addClass('col-xs-4'); 
+		//$('.content_widget_open').addClass('col-xs-offset-4');
+	}
+	$('.content_open-sect').css('padding-top',($('.open-sect').height()-$('.content_open-sect').height())/2);
+	//contact-sect
+	$('.content_contact-sect').css('padding-top',($('.contact-sect').height()-$('.content_contact-sect').height())/3);
+	//footer-sect
+	$('.footer-sect').height($('.content_redes-sect').height()*5)
+	$('.content_redes-sect').css('padding-top',($('.footer-sect').height()/2)/4);
+	//$('.content_footer2-sect').css('padding-top',(($('.footer-sect').height()/2)-($('.content_redes-sect').height())));
+	$('.content_footer2-sect').css('padding-top',( (($('.footer-sect').height()/2)-($('.content_redes-sect').height()))- ($('.content_redes-sect').height()/2)) );
+	//general
+	$('body').scrollLeft(0);
+	//$('.wrapper-bx').height($('home-sect').height()+$('welcome-sect').height()+$('historia-sect').height()+$('menu-sect').height()+$('location-sect').height()+$('horarios-sect').height()+$('open-sect').height()+$('contact-sect').height()+$('footer-sect').height());
+});
+
+/*
+$(document.body).on('click','.historia-sect-left',function(){
+	
+	if (!$(".historia1").is(':hidden')) {
+	   // ...
+	   console.log('click left')
+	   $('.historia1').hide();
+	   $('.historia2').hide();
+	   $('.historia3').show();
+	}else {
+		if (!$(".historia2").is(':hidden')) {
+	   		// ...
+		   $('.historia2').hide();
+		   $('.historia3').hide();
+		   $('.historia1').show();
+		}else {
+			if (!$(".historia3").is(':hidden')) {
+		   // ...
+			   $('.historia3').hide();
+			   $('.historia1').hide();
+			   $('.historia2').show();
+			}
+		}
+	}
+	
+})
+
+$(document.body).on('click','.historia-sect-right',function(){
+	console.log('click historia-sect-right')
+	if (!$(".historia1").is(':hidden')) {
+	   // ...
+	   $('.historia1').hide();
+	   $('.historia3').hide();
+	   $('.historia2').show();
+	}else if (!$(".historia2").is(':hidden')) {
+	   // ...
+	   $('.historia1').hide();
+	   $('.historia2').hide();
+	   $('.historia3').show();
+	}else if (!$(".historia3").is(':hidden')) {
+	   // ...
+	   $('.historia3').hide();
+	   $('.historia2').hide();
+	   $('.historia1').show();
+	}
+})
+*/
+
+$(document.body).on('click','.btn_form', function(ev){
+	ev.preventDefault();
+	console.log('btn_form');
+	if (!$(".formulario1").is(':hidden')) {
+	   // ...
+	   $('.formulario1').slideUp("slow");
+	   $('.formulario3').hide();
+	   $('.formulario4').hide();
+	   $('.formulario5').hide();
+	   $('.formulario2').slideDown("slow");
+	}else if (!$(".formulario2").is(':hidden')) {
+	   // ...
+	   if($('#form_nombre').val()!=''){
+	   		$('.nombre_form_sub').text($('#form_nombre').val());
+	   		$('.formulario1').hide();
+		   	$('.formulario2').slideUp("slow");
+		   	$('.formulario4').hide();
+	   		$('.formulario5').hide();
+		   	$('.formulario3').slideDown("slow");
+	   }else{
+	   	alert('Debe introducir un nombre');
+	   }
+	}else if (!$(".formulario3").is(':hidden')) {
+	   // ...
+	   	if($('#form_mail').val()!=''){
+		   $('.formulario3').slideUp("slow");
+		   $('.formulario2').hide();
+		   $('.formulario1').hide();
+	   	   $('.formulario5').hide();
+		   $('.formulario4').slideDown("slow");
+		}else{
+			alert('Debe introducir un email');
+		}
+	}else if (!$(".formulario4").is(':hidden')) {
+	   	// ...
+		$('.formulario3').hide();
+		$('.formulario2').hide();
+		$('.formulario1').hide();
+		$('.formulario4').slideUp("slow");
+		$('.formulario5').slideDown("slow");
+	}else if (!$(".formulario5").is(':hidden')) {
+	   	// ...
+	   	if($('#form_mensaje').val()!=''){
+	   		enviar_mensaje();
+	   		//alert('¡Gracias por tu mensaje '+$('#form_nombre').val()+'!');
+			$('.formulario2').hide();
+			$('.formulario3').hide();
+			$('.formulario4').hide();
+			$('.formulario5').slideUp("slow");
+			$('.formulario1').slideDown("slow");
+		}else{
+			alert('¡Debes dejar un mensaje!');
+		}
+	}
+
+});
+
+$(document.body).on('click','.btn_form_back', function(ev){
+	ev.preventDefault();
+	//console.log('btn_form');
+	if (!$(".formulario2").is(':hidden')) {
+   		$('.formulario3').hide();
+	   	$('.formulario2').slideUp("slow");
+	   	$('.formulario4').hide();
+   		$('.formulario5').hide();
+	   	$('.formulario1').slideDown("slow");
+	}else if (!$(".formulario3").is(':hidden')) {
+		   $('.formulario3').slideUp("slow");
+		   $('.formulario4').hide();
+		   $('.formulario1').hide();
+	   	   $('.formulario5').hide();
+		   $('.formulario2').slideDown("slow");
+	}else if (!$(".formulario4").is(':hidden')) {
+	   	// ...
+		$('.formulario5').hide();
+		$('.formulario2').hide();
+		$('.formulario1').hide();
+		$('.formulario4').slideUp();
+		$('.formulario3').slideDown("slow");
+	}else if (!$(".formulario5").is(':hidden')) {
+	   		//alert('¡Gracias por tu mensaje '+$('#form_nombre').val()+'!');
+			$('.formulario2').hide();
+			$('.formulario3').hide();
+			$('.formulario1').hide();
+			$('.formulario5').slideUp();
+			$('.formulario4').slideDown("slow");
+	}
+
+})
+
+function enviar_mensaje(){
+	try{
+		if($.trim($("#form_nombre").val())==""){
+			throw "Escribe tu nombre";
+		}
+		if($.trim($("#form_mail").val())==""){
+			throw "Escribe tu correo";
+		}
+		if($.trim($("#form_mensaje").val())==""){
+			throw "Deja un mensaje";
+		}
+		var nombre 	= $("#form_nombre").val();
+		var mail 	= $("#form_mail").val();
+		var asunto 	= $("#form_asunto").val();
+		var mensaje = $("#form_mensaje").val();
+		console.log('nombre: '+nombre);
+		console.log('mail: '+mail);
+		console.log('asunto: '+asunto);
+		console.log('mensaje: '+mensaje);
+		alert('¡Gracias por tu mensaje '+nombre+'!');
+		/*
+		$.ajax({
+			url: "",
+			type: 'POST',
+			dataType: 'json',
+			data:{nombre: ,mail:, asunto:, mensaje:},
+			success: function (data) {
+				
+			},
+			error: function (err, req) {
+				
+			}
+		});
+		*/
+		
+	}catch(ex){
+		TOOTH.main.notificacion(ex, 'error');
+	}
+}

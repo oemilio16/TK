@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>TK Terraza Grill</title>
+		<!-- CSS -->
+		<!-- Latest compiled and minified CSS -->
+		<!--
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		 -->
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+		<link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
+		<link href="css/dev.css" type="text/css" rel="stylesheet" media="screen,projection" />
+		<!--http://www.getmdl.io-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/isMobile.js"></script>
+        <script type="text/javascript">
+            if ((isMobile.AndroidTablet()) || !isMobile.any()) {
+                //version full
+                //window.location = "../";
+            }else{
+            	$(function() {
+	            	$(".videobg").click(function () {
+				        if ($(this).get(0).paused) {
+				            $(this).get(0).play();
+				            $(this).prop('muted',false)
+				            //$("#hvm_holder .playbtn").hide();
+				        } else {
+				            $(this).get(0).pause();
+				            //$("#hvm_holder .playbtn").show();
+				        }
+				    })
+				    /*
+				    $(".tk-logo").click(function () {
+				        $(".videobg").click();
+				    });
+				    */
+				    $(".overlayLogo").click(function () {
+				        $(".videobg").click();
+				    });
+				    $(".videobg").get(0).onplay = function() {
+				        //$("#hvm_holder .playbtn").hide();
+				        //$(this).prop('muted',false);
+				        //$("#home_video").prop('muted',false);
+				        //var vid = document.getElementById("home_video_m");
+				        //vid.muted = false;
+				    };
+				    $(".videobg").get(0).onpause  = function() {
+				        //$("#hvm_holder .playbtn").show();
+				        //$(this).prop('muted','muted')
+				        //$("#home_video").prop('muted',true);
+				    };
+				});
+
+			    //mutedVideo();
+			    //Sonido video
+			    /*
+			    function mutedVideo(){
+			        setTimeout(function(){
+			            if(isMobile.any){
+			                $("#home_video_m").trigger('click');
+			                setTimeout(function(){ 
+			                    $("#home_video_m").trigger('click');
+			                },2000)
+			            }
+			        },1000)
+			    }
+			    */
+            }
+        </script>
+	</head>
+	<body>
+		
+		<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn"><img src="img/close-nav.png"/></a>
+			  <a href="#" class="goto" data-target=".historia-sect">NUESTRA HISTORIA</a>
+			  <a href="#" class="goto" data-target=".menu-sect">CONOCE NUESTRO MENÚ</a>
+			  <a href="#" class="goto" data-target=".location-sect">DIRECCIÓN</a>
+			  <a href="#" class="goto" data-target=".horarios-sect">HORARIOS</a>
+			  <a href="#" class="goto" data-target=".open-sect">RESERVACIONES</a>
+			  <a href="#" class="goto" data-target=".contact-sect">CONTACTO</a>
+			  <a href="#" class="goto" data-target=".footer-sect">REDES SOCIALES</a>
+		</div>
+		<div class="wrapper-bx">
+		
+			<a class="click-nav" href="#"><img src="img/menu-points.png" class="img-responsive" alt="menu-points.png" data-anijs="if: load, do: bounceInRight animated"></a>
+			
+		
+			<section class="home-sect row">
+				<!--
+				<div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3 content_home-sect">
+					<img class="tk-logo img-responsive" src="img/tk-logo.png"  alt="tk-logo.png" data-anijs="if: load, do: fadeIn animated"/>
+				</div>
+				-->
+				<div class="easyhtml5video" style="position:relative;width: 100%;height: 100%;overflow: hidden;">
+                    <video class="videobg" muted preload="auto" autoplay poster="img/bg-home.jpg" style="width:100%" loop>
+                        <!--<source src="index.files/html5video/VideoParaWebOriginal.m4v" type="video/mp4" />-->
+                        <source src="video/TKReelWeb.webm" type="video/webm" />
+                        <source src="video/TKReelWeb.ogv" type="video/gg" />
+                        <source src="video/TKReelWeb.mp4" type="video/mp4"/>
+                        <source src="video/TKReelWeb.m4v" type="video/m4v"/>
+                        <!--
+                        <object type="application/x-shockwave-flash" data="index.files/html5video/flashfox.swf" width="1024" height="576" style="position:relative;width:100%;height: 100%">
+                            <param name="movie" value="index.files/html5video/flashfox.swf" />
+                            <param name="allowFullScreen" value="true" />
+                            <param name="flashVars" value="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=true&amp;poster=index.files/html5video/VideoParaWebOriginal.jpg&amp;src=VideoParaWebOriginal.m4v" />
+                            <embed src="index.files/html5video/flashfox.swf" width="1024" height="576" style="position:relative;width:100%;height: 100%"  flashVars="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=true&amp;poster=index.files/html5video/VideoParaWebOriginal.jpg&amp;src=VideoParaWebOriginal.m4v"	allowFullScreen="true" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_en" />
+                            <img alt="VideoParaWebPageFishers" src="index.files/html5video/VideoParaWebOriginal.jpg" style="position:absolute;left:0;" width="100%" title="Video playback is not supported by your browser" />
+                        </object>
+                        -->
+                    </video>
+                    <!--<img src="images/playbtn.png" class="playbtn hidden-xs" width="64">-->
+                    <script type="text/javascript">
+                        $(function(){
+                            $(window).resize(function(){
+                                $('.videobg').css({
+                                    height:$(window).height(),
+                                    width:($(window).height()*1.77)
+                                })
+                                //casos especiales
+                                if($('.videobg').outerWidth()<$(window).width() && $('.videobg').outerHeight()==$(window).height()){
+                                    //altura OK, ancho no suficiente, crezco en base al ancho
+                                    $('.videobg').css({
+                                        height:$(window).width()/1.77777,
+                                        width:($(window).width())
+                                    })
+                                }
+                                if($('.videobg').outerWidth()>$(window).width()){
+                                    //ancho video mayor que el ancho de la ventana, centrar
+                                    $('.videobg').css({
+                                        'margin-left':-(($('.videobg').outerWidth()-$(window).width())/2)
+                                    })
+                                }else{
+                                    //ancho video igual que de la ventana, sin centrar
+                                    $('.videobg').css({
+                                        'margin-left':0
+                                    })
+                                }
+                                if ((isMobile.iPad() || isMobile.AndroidTablet()) || !isMobile.any()) {
+					                //version full
+					                //window.location = "../";
+					                $('.overlayLogo').css('top',($('.videobg').height()-$('.tk-logo').height())/2);
+					            }else{
+                                	$('.overlayLogo').css('top','5%');
+                                }
+                                /*$('.overlayLogo').css('left',($(window).width()-$('.tk-logo').width())/2);*/
+                            });
+                            $(window).resize();
+                        });
+                    </script>
+                </div>
+                <div class="overlayLogo col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+                	<img class="tk-logo img-responsive" src="img/tk-logo.png"  alt="tk-logo.png" data-anijs="if: load, do: fadeIn animated"/>
+                </div>
+			</section>
+			<!--
+			<div class="btn-group">
+			  <a class="dropdown-toggle click-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <img src="img/menu-points.png"  alt="menu-points.png" data-anijs="if: load, do: bounceInRight animated">
+			  </a>
+			  <ul class="dropdown-menu dropdown-menu-tk">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+			-->
+
+			<section class="welcome-sect row">
+				
+				<div class="col-xs-6 welcam-container">
+					<article class="welcam">
+						<h1>¡HOLA!</h1>
+						<p>Ven a experimentar una travesía gastronómica excepcional. Nuestra cocina es auténtica y une a la gente. Conecta la historia y las tradiciones en una atmósfera cálida y agradable.</p>
+					</article>
+				</div>
+				<div class="col-xs-6">
+					<img class="meat-img img-responsive" src="img/meat-slide.png" alt="" data-anijs="if: scroll, on: window, do: bounceInRight animated, before: scrollReveal"/>
+				</div>
+			</section>
+			<section class="historia-sect row">
+				<!--
+				<div class="historia-sect-back col-xs-10">
+					<div class="row content_historia_box">
+						<div class="col-xs-2 verticaltext">
+							<span class="verticaltext_content">
+
+							</span>
+							<span class="historia-sect-left"><img src="img/last-historia.png"/></span>
+						</div>
+						<div class="col-xs-10">
+							<div class="row">
+								<div class="col-xs-8 content_historia historia1 text-center">
+									<span class="text_historia">
+										<p>"CREEMOS EN EL MEDITADO <br/>CUIDADO DE TODOS LOS <br>DETALLES..."</p>
+									</span>
+								</div>
+								<div class="col-xs-12 content_historia historia2">
+									<span class="text_historia">
+										<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+										</p>
+									</span>
+								</div>
+								<div class="col-xs-6 content_historia historia3">
+									<span class="text_historia">
+										<p>"CREEMOS EN EL MEDITADO CUIDADO DE TODOS LOS DETALLES 3..."</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img class="img-responsive bg-historia-img" src="img/bg-historia-b.jpg"/>
+				</div>
+				<div class="flecha_historia_right col-xs-2 ">
+					<img class="historia-sect-right" src="img/next-historia.png"/>
+				</div>
+				-->
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+					<!-- Indicators 
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+					-->
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+						  	<img class="img-responsive historia_image" src="img/HistoriaDesk-TK_01.jpg" alt="Historia1">
+						  	<div class="carousel-caption-1 row">
+							    <div class="col-xs-6 col-md-10 content_historia historia1">
+									<span class="texto-historias texto_gral">
+										<p>"CREEMOS EN EL MEDITADO CUIDADO DE TODOS LOS DETALLES..."</p>
+									</span>
+								</div>
+						  	</div>
+						</div>
+						<div class="item">
+							<img class="img-responsive historia_image2" src="img/HistoriaDesk-TK_02-padding.jpg" alt="Historia2">
+							<div class="carousel-caption-2 row">
+								<div class="col-xs-4 texto-historias texto_gral">
+									TK TERRAZA GRILL fué fundado en 1978 y conocido largo tiempo como Tecamacharlie's.
+								</div>
+								<!--
+								<div class="col-xs-3">
+									
+								</div>
+								-->
+								<div class="col-xs-4 col-xs-offset-3 texto-historias texto_gral">
+									36 años de experiencia nos han permitido innovar platillos típicos de la cocina mexicana - internacional y perfeccionar recetas, mejorando día a día las expectativas culinarias de nuestros comensales.
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<img class="img-responsive historia_image3" src="img/HistoriaDesk-TK_03.jpg" alt="Historia3">
+							<div class="carousel-caption-3 row">
+								<div class="col-xs-9 col-md-9">
+									<span class="texto-historias texto_gral">
+										<p>Platillos que nos han caracterizado a lo largo de los años, como nuestros ostiones 4x4, tacos rib eye, el queso cilantro y los ricos tacos rangel.</p>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<img class="img-responsive historia_image4" src="img/HistoriaDesk-TK_04.jpg" alt="Historia4">
+							<div class="carousel-caption-4 row">
+								<div class="col-xs-6 col-md-6">
+									<span class="texto-historias texto_gral">
+										<p>Todos forman parte de nuestra historia.<br>
+										TK Terraza Grill forma parte de una cadena exitosa de restaurantes llamada Grupo Gastronómico ROAL. Este grupo se ha extendido internacionalmente en las cocinas Europeas como en Londres y Madrid.</p>
+									</span>
+								</div>
+						</div>
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<!--
+						<span class="glyphicon glyphicon-chevron-left carousel-control-glyphs" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+						-->
+						<div class="carousel-control-glyphs">
+							<img class="historia-sect-left" src="img/last-historia.png"/>
+						</div>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<!--<span class="glyphicon glyphicon-chevron-right carousel-control-glyphs" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+						-->
+						<div class="carousel-control-glyphs">
+							<img class="historia-sect-right" src="img/next-historia.png"/>
+						</div>
+					</a>
+				</div>
+
+			</section>
+			<section class="menu-sect">
+				<div class="row content_menu-sect">
+					<div class="row content_menu-sect_row">
+						<div class="col-xs-12 titulo_menu">
+							¿QUÉ TENEMOS EN NUESTRA COCINA?
+						</div>
+						<div class="col-xs-12 texto_menu">
+							<u><a href="TK_2016_INTERIOR.pdf" target="_blank" class="link_menu">CONOCE AQUÍ NUESTRO MENÚ</a></u>
+						</div>
+					</div>
+					<img class="img-responsive bg-menu-img" src="img/bg-cocina.png"/>				
+				</div>
+				<div class="row floating-map">
+					<div class="col-xs-6">
+						<a href="https://www.google.com.mx/maps/place/TK+Terraza+Grill/@19.4286369,-99.2260286,20.1z/data=!4m21!1m15!4m14!1m6!1m2!1s0x85d201875f37bb5f:0x504f65eda6ae9918!2sAvenida+de+las+Fuentes+41,+Lomas+de+Tecamachalco,+53950+Naucalpan+de+Ju%C3%A1rez,+M%C3%A9x.,+M%C3%A9xico!2m2!1d-99.2276039!2d19.4285351!1m6!1m2!1s0x85d201877e4d362d:0x81673e3687837a4b!2sFuente+de+Molinos+4,+Lomas+de+San+Isidro,+Naucalpan+de+Ju%C3%A1rez,+M%C3%A9x.!2m2!1d-99.2260839!2d19.4285806!3m4!1s0x0:0x42277a573656b0cb!8m2!3d19.4285085!4d-99.2254532" target="_blank">
+							<img class="map-tk img-responsive" src="img/map-contacto.png" alt="" data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal"/>
+						</a>
+					</div>
+					<div class="col-xs-6 content_direccion">
+						<div class="row">
+							<div class="col-xs-4 col-xs-offset-4">
+									<img class="img-responsive opentable_logo" src="img/ubicacion-icono.png"/>	
+							</div>
+							<div class="col-xs-12 text-center titulo_direccion">
+								<p>DIRECCIÓN</p>
+							</div>
+							<div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 text-center texto_direccion">
+								<p>Calle Fuente de Trevi 4, Lomas de Tecamachalco, 53900. Naucalpan de Juárez, Méx.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="location-sect">
+				
+			</section>
+			<section class="horarios-sect">
+				<div class="row content_horarios-sect">
+					<div class="col-xs-6 horarios">
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 titulo_horarios" style="color: #95070b;">
+								NUESTROS HORARIOS
+							</div>
+							<div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2 text-left">
+								Lunes
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 24:00 hrs
+							</div>
+							<div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2 text-left">
+								Martes
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 24:00 hrs
+							</div>
+							<div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2 text-left">
+								Miércoles
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 24:00 hrs
+							</div>
+							<div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2 text-left">
+								Jueves
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 01:00 hrs
+							</div>
+							<div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2 text-left">
+								Viernes
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 01:00 hrs
+							</div>
+							<div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2 text-left">
+								Sábado
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 01:00 hrs
+							</div>
+							<div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2 text-left">
+								Domingo
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 19:00 hrs
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<img class="img-responsive img_horarios" src="img/bg-horarios.png"/>	
+					</div>
+				</div>
+			</section>
+			<section class="open-sect">
+				<div class="row content_open-sect">
+					<div class="col-xs-12">
+						<p><h4>RESERVACIONES</h4></p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+						<p>Al teléfono <a href="tel:05215552930121" class="numero_telefono">55 52 93 0121</a> o buscar mesas disponibles en TK Grill</p>
+					</div>
+					<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 content_widget_open">
+						<script type='text/javascript' src='//www.opentable.com.mx/widget/reservation/loader?rid=100075&domain=commx&type=standard&theme=standard&lang=es&overlay=true&iframe=false'></script>
+					</div>
+					
+				</div>
+			</section>
+			<section class="contact-sect">
+				<div class="content_contact-sect">
+					<div class="formulario1">
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3 text text-center titulo_gral">
+								<p><h4><span class="numeracion-contacto">PONTE EN CONTACTO</span></h4></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3 text-center texto_gral">
+								<p>
+									Estarás de acuerdo que no hay nada mejor que un mensaje de un completo extraño, es una oportunidad para conocer a alguien y hacer un nuevo amigo.
+								</p>
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-6 col-xs-offset-3 text-center texto_gral">
+								<a class="btn btn-default btn_enviar_mensaje btn_form"  role="button">
+									ENVIAR UN MENSAJE
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="formulario2">
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario titulo_gral">
+											<span class="numeracion-contacto">
+												1.
+											</span> 
+											¿Cual es tu nombre?
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left texto_gral">
+								<p>
+									El mío es TK. No seamos extraños por mucho más tiempo...
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<p>
+									<h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></h2>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1">
+								<input id="form_nombre" type="text" name="nombre_form">
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-2 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_form btn_ok" href="#" role="button">
+									OK
+								</a>
+							</div>
+							<div class="col-xs-5 col-xs-offset-2">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button" disabled="disabled">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+								<a class="flechas-contacto btn_form btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="formulario3">
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario">
+											<span class="numeracion-contacto titulo_gral">
+												2.
+											</span> 
+											¿Que email prefieres usar para estar en contacto, <span class="nombre_form_sub">visitante</span>?*
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left texto_gral">
+								<p>
+									Usaré esto para estar en contacto contigo, no para bombardearte con newsletters.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<p>
+									<h2><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></h2>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<input id="form_mail" type="email" name="email_form">
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-2 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_form btn_ok" href="#" role="button">
+									OK
+								</a>
+							</div>
+							<div class="col-xs-5 col-xs-offset-2">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+								<a class="flechas-contacto btn_form btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="formulario4">
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario titulo_gral">
+											<span class="numeracion-contacto">
+												3.
+											</span> 
+											¿Sobre que trata tu mensaje?
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left texto_gral">
+								<p>
+									Piensalo como si fuera el asunto de un correo.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left texto_gral">
+								<select id="form_asunto" multiple class="form-control">
+								  <option value="feedback">Tengo feedback que quiero darles</option>
+								  <option value='Lorem'>Lorem ipsum dolor sit amet</option>
+								  <option value="Consectetur">Consectetur adipiscing elit</option>
+								</select>
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-2 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_form btn_ok" href="#" role="button">
+									OK
+								</a>
+							</div>
+							<div class="col-xs-5 col-xs-offset-2">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+								<a class="flechas-contacto btn_form btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="formulario5">
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario titulo_gral">
+											<span class="numeracion-contacto">
+												4.
+											</span> 
+											¿Bueno y cual es tu mensaje?
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left texto_gral">
+								<p>
+									¡Yo prefiero mensajes que van directo al grano por favor dispara!
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<p>
+									<h2><span class="glyphicon glyphicon-print" aria-hidden="true"></span></h2>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<textarea id="form_mensaje" class="form-control" rows="3"></textarea>
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-3 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_enviar_mensaje btn_form" href="#" role="button">
+									¡Enviar! <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+								</a>
+							</div>
+							<div class="col-xs-4 col-xs-offset-3">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</section>
+			<section class="footer-sect">
+				<!--Logos más pequeños
+				<div class="row content_redes-sect">
+					<div class="col-xs-4">
+						<div class="col-sm-4 col-sm-offset-8 col-xs-6 col-xs-offset-3">
+							<a target="_blank" href="#">
+									<img class="img-responsive" src="img/tw-ico.png"/>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+							<a target="_blank" href="#">
+								<img class="img-responsive" src="img/fb-ico.png"/>
+							</a>
+						</div>				
+					</div>
+					<div  class="col-xs-4">
+						<div class="col-sm-4 col-xs-6 col-xs-offset-3">
+							<a target="_blank" href="#">
+								<img class="img-responsive" src="img/ig-ico.png"/>
+							</a>
+						</div>
+					</div>
+				</div>
+				-->
+				<div class="row content_redes-sect">
+					<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
+						<div class="row">
+							<div class="col-xs-4">
+									<a target="_blank" href="https://twitter.com/tkterrazagrill">
+											<img class="img-responsive opentable_logo" src="img/tw-ico.png"/>
+									</a>
+							</div>
+							<div class="col-xs-4">
+									<a target="_blank" href="https://www.facebook.com/TkTerrazaGrill">
+										<img class="img-responsive opentable_logo" src="img/fb-ico.png"/>
+									</a>			
+							</div>
+							<div  class="col-xs-4">
+									<a target="_blank" href="https://www.instagram.com/tk_terrazagrill">
+										<img class="img-responsive opentable_logo" src="img/ig-ico.png"/>
+									</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content_footer2-sect text-center texto_gral">
+					<div class="row">
+						<div class="col-sm-10 col-sm-offset-1 col-xs-12">
+							<ul>
+								<li>
+									<h4>
+										<a href="#" target="_blank" class="texto_gral">
+											CARLITOS GRILL	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank" class="texto_gral">
+											SF SHAKERS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank" class="texto_gral">
+											LA COCINA DE EL TRAS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank" class="last_li texto_gral">
+											MESTIZO	
+										</a>
+									</h4>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-4 text-center">
+								<img class="img-responsive opentable_logo" src="img/logo-open-table.png"/>
+						</div>	
+					</div>
+					<div class="row texto_gral">
+						<div class="col-xs-8 col-xs-offset-2 text-center footer_text texto_gral">
+							<br>GRUPO GASTONÓMICO ROAL &reg;
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--
+			<section class="footer2-sect">
+				<div class="content_footer2-sect text-center">
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1">
+							<ul>
+								<li>
+									<h4>
+										<a href="#" target="_blank">
+											CARLITOS GRILL	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank">
+											SF SHAKERS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank">
+											LA COCINA DE EL TRAS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank" class="last_li">
+											MESTIZO	
+										</a>
+									</h4>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-6 col-xs-offset-3 text-center">
+								<img class="img-responsive opentable_logo" src="img/logo-open-table.png"/>
+						</div>	
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-xs-offset-3 text-center">
+							<br>GRUPO GASTONÓMICO ROYAL &reg;
+						</div>
+					</div>
+				</div>
+			</section>
+			-->
+		</div>
+		<!--<img src="/img/bg-home.jpg"  alt="bg-home.jpg">
+		<img src="/img/menu-points.png"  alt="menu-points.png">
+		<img src="/img/close-nav.png"  alt="close-nav.png">
+		<img src="/img/tk-logo.png"  alt="tk-logo.png">
+		
+		<img src="/img/bg-historia.jpg"  alt="bg-historia.jpg">
+		<img src="/img/next-historia.png"  alt="next-historia.png">
+		<img src="/img/last-historia.png"  alt="last-historia.png">
+		
+		<img src="/img/map-contacto.png"  alt="map-contacto.png">
+		
+		<img src="/img/ubicacion-icono.png"  alt="ubicacion-icono.png">
+		
+		<img src="/img/bg-horarios.png"  alt="bg-horarios.png">
+		
+		<img src="/img/tw-ico.png"  alt="tw-ico.png">
+		<img src="/img/fb-ico.png"  alt="fb-ico.png">
+		<img src="/img/ig-ico.png"  alt="ig-ico.png">
+		
+		<img src="/img/logo-open-table.png"  alt="logo-open-table.png">
+		<img src="/img/chalkboard-ubicacion.png"  alt="chalkboard-ubicacion.png">
+		
+		<img src="/img/bg-footer.png"  alt="bg-footer.png">-->
+		
+		
+		
+		
+		<!-- MODALS - ALERTS - DROP DOWNS-->
+		<!--[if IE]>
+			<script src="js/html5.js"></script>
+			<script type="text/javascript" src="js/respond.js"></script>
+		<![endif]-->
+		<!-- Scripts-->
+		<script src="js/anijs-min.js"></script>
+		<script src="js/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/dev.js"></script>
+		<!--<script src="js/init.config.js"></script>
+		<script src="js/init.js"></script>-->
+		<!--INTERNET CHECK-->
+		<!--PERFIL-->
+		<!--<script src="js/web.js"></script>-->
+		<script>
+			jQuery(function() {
+		  	
+		  		
+				
+		  	});
+		</script>
+	</body>
+
+</html>

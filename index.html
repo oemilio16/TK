@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<!--Search Engine Optimization Meta Tags-->
+		<title>TK Terraza Grill</title>
+		<meta name="description" content="Tk Terraza Grill es un lugar donde conectamos historias a través de nuestra autentica cocina mexicana y nuestro gran sentido del humor."/>
+		<meta name="keywords" content="Colonos tecamachalco,Tecamachalco DF,Tecamachalco mapa,Tecamachalco restaurantes,tecamachalco méxico,tecamachalco como llegar,tecamachalco naucalpan,lomasdetecamachalco,EdoMex,Buenos cócteles,Ambiente relajado,Informal,Comida en Tecamachalco,Tecamacharlies,Queremos comer,Comida,comer,familiar,buen ambiente,futbol,carne teca,cortes de carne tecamachalco,oysters tecamachalco,grill tecamachalco,Queso Cilantro,ANTOJITOS MEXICANOS TECAMACHALCO,ANTOJITOS MEXICANOS,Cazuela de cecina,tacos de rib eye,churros de cajeta,restaurantes con terraza tecamachalco,terraza en teca,terraza,onza,mariscos tecamachalco" />
+		<meta name="Distribution" content="Global" />
+        <meta name="Rating" content="General"/> 
+        <meta name="Robots" content="INDEX,FOLLOW" />
+        <meta name="title" content="TK Terraza Grill">
+        <meta name=”city” content=”CDMX”>
+    	<meta name=”country” content=”Mexico”>
+    	<meta name="author" content="chopmedia.mx" />
+		
+		<!--iconos-->
+        <!--<link href="/images/Icons/apple-touch-icon.png" rel="apple-touch-icon"/>-->
+        <link href="img/Icons/72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+        <link href="img/Icons/114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+        <link href="img/Icons/152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+        <link rel="icon" sizes="192x192" href="img/Icons/192x192.png">
+        <link rel="icon" sizes="128x128" href="img/Icons/128x128.png">
+
+        <!-- Facebook meta -->
+		<meta property="og:title" content="TK Terraza Grill">
+		<meta property="og:site_name" content="TK Terraza Grill">
+		<meta property="og:url" content="http://www.tkterrazagrill.com">
+		<meta property="og:description" content="Tk Terraza Grill es un lugar donde conectamos historias a través de nuestra autentica cocina mexicana y nuestro gran sentido del humor.">
+		<meta property="og:image"              content="http://www.tkterrazagrill.com/img/Card-fb.jpg" />
+		<meta property="fb:app_id" content="1167858986565708">
+		<meta property="og:type" content="website">
+		<!--Twitter meta -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@tkterrazagrill">
+		<meta name="twitter:title" content="TK Terraza Grill">
+		<meta name="twitter:description" content="Tk Terraza Grill es un lugar donde conectamos historias a través de nuestra autentica cocina mexicana y nuestro gran sentido del humor.">
+		<meta name="twitter:image" content="http://www.tkterrazagrill.com/img/Card-tw.jpg">
+
+		<!-- CSS -->
+		<!-- Latest compiled and minified CSS -->
+		<!--
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		 -->
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" >
+		<!--<link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">-->
+		<link href="css/anicollection.css" rel="stylesheet" type="text/css">
+		<link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
+		<link href="css/dev.css" type="text/css" rel="stylesheet" media="screen,projection" />
+		<!--http://www.getmdl.io-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/isMobile.js"></script>
+        <script type="text/javascript">
+       	 	try {
+		        Typekit.load({async: true});
+		    } catch (e) {
+		    }
+        	if(isMobile.iPhone || isMobile.iPpod ||isMobile.iPad){
+        		$('.videobg-desktop').hide();
+				$('.videobg-mobile').removeClass('visible-xs').show();
+        	}
+            if (isMobile.AndroidTablet() || !isMobile.any()) {
+                //version full
+                //window.location = "../";
+            }else{
+            	$(function() {
+	            	$(document).on('click',".videobg-mobile",function () {
+				        if ($(this).get(0).paused) {
+				            $(this).get(0).play();
+				            $(this).prop('muted',false)
+				            //$("#hvm_holder .playbtn").hide();
+				            if (isMobile.AndroidTablet || !isMobile.any) {
+				                //version full
+				                //window.location = "../";
+				            }else{
+				            	$('.overlayPlay').hide();
+				        	}
+				        } else {
+				            $(this).get(0).pause();
+				            //$("#hvm_holder .playbtn").show();
+				            if (isMobile.AndroidTablet || !isMobile.any) {
+				                //version full
+				                //window.location = "../";
+				            }else{
+				            	$('.overlayPlay').show();
+				        	}
+				        }
+				    })
+				    
+				    $(document).on('click',".videobg-desktop",function () {
+				        if ($(this).get(0).paused) {
+				            $(this).get(0).play();
+				            $(this).prop('muted',false)
+				            //$("#hvm_holder .playbtn").hide();
+				            if (isMobile.AndroidTablet || !isMobile.any) {
+				                //version full
+				                //window.location = "../";
+				            }else{
+				            	$('.overlayPlay').hide();
+				        	}
+				        } else {
+				            $(this).get(0).pause();
+				            //$("#hvm_holder .playbtn").show();
+				            if ((isMobile.AndroidTablet) || !isMobile.any) {
+				                //version full
+				                //window.location = "../";
+				            }else{
+				            	$('.overlayPlay').show();
+				        	}
+				        }
+				    })
+				    /*
+				    $(".tk-logo").click(function () {
+				        $(".videobg").click();
+				    });
+				    */
+				    $(document).on('click',".overlayLogo",function () {
+				    	console.log('click logo')
+				    	if(isMobile.any || isMobile.iPhone || isMobile.iPpod ||isMobile.iPad){
+				    		$(".videobg-mobile").click();	
+				    	}else{
+				    		$(".videobg-desktop").click();	
+				    	}
+				    });
+				    $(document).on('click',".overlayPlay",function () {
+				    	console.log('click lplay')
+				        if(isMobile.any || isMobile.iPhone || isMobile.iPod ||isMobile.iPad){
+				    		$(".videobg-mobile").click();	
+				    	}else{
+				    		$(".videobg-desktop").click();	
+				    	}
+				    });
+				    $(".videobg-desktop").get(0).onplay = function() {
+				    	if ((isMobile.AndroidTablet) || !isMobile.any) {
+			                //version full
+			                //window.location = "../";
+			                $('.overlayPlay').hide();
+			            }else{
+			            	$('.overlayPlay').hide();
+			        	}
+				        //$("#hvm_holder .playbtn").hide();
+				        //$(this).prop('muted',false);
+				        //$("#home_video").prop('muted',false);
+				        //var vid = document.getElementById("home_video_m");
+				        //vid.muted = false;
+				    };
+				    $(".videobg-desktop").get(0).onpause  = function() {
+				    	if ((isMobile.AndroidTablet) || !isMobile.any) {
+			                //version full
+			                //window.location = "../";
+			            }else{
+			            	$('.overlayPlay').show();
+			        	}
+				        //$("#hvm_holder .playbtn").show();
+				        //$(this).prop('muted','muted')
+				        //$("#home_video").prop('muted',true);
+				    };
+				    
+				    $(".videobg-mobile").get(0).onplay = function() {
+				    	if ((isMobile.AndroidTablet) || !isMobile.any) {
+			                //version full
+			                //window.location = "../";
+			                $('.overlayPlay').hide();
+			            }else{
+			            	$('.overlayPlay').hide();
+			        	}
+				        //$("#hvm_holder .playbtn").hide();
+				        //$(this).prop('muted',false);
+				        //$("#home_video").prop('muted',false);
+				        //var vid = document.getElementById("home_video_m");
+				        //vid.muted = false;
+				    };
+				    $(".videobg-mobile").get(0).onpause  = function() {
+				    	if ((isMobile.AndroidTablet) || !isMobile.any) {
+			                //version full
+			                //window.location = "../";
+			            }else{
+			            	$('.overlayPlay').show();
+			        	}
+				        //$("#hvm_holder .playbtn").show();
+				        //$(this).prop('muted','muted')
+				        //$("#home_video").prop('muted',true);
+				    };
+				});
+
+			    //mutedVideo();
+			    //Sonido video
+			    /*
+			    function mutedVideo(){
+			        setTimeout(function(){
+			            if(isMobile.any){
+			                $("#home_video_m").trigger('click');
+			                setTimeout(function(){ 
+			                    $("#home_video_m").trigger('click');
+			                },2000)
+			            }
+			        },1000)
+			    }
+			    */
+            }
+            $( '.easyhtml5video' ).click(function( event ) {
+			  console.log( "clicked: easyhtml5video" );
+			});
+        </script>
+	</head>
+	<body>
+		
+		<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn"><img src="img/close-nav.png"/></a>
+			  <a href="#" class="goto" data-target=".historia-sect">NUESTRA HISTORIA</a>
+			  <a href="#" class="goto" data-target=".menu-sect">CONOCE NUESTRO MENÚ</a>
+			  <a href="#" class="goto" data-target=".location-sect">DIRECCIÓN</a>
+			  <a href="#" class="goto" data-target=".horarios-sect">HORARIOS</a>
+			  <a href="#" class="goto" data-target=".open-sect">RESERVACIONES</a>
+			  <a href="#" class="goto" data-target=".contact-sect">CONTACTO</a>
+			  <a href="#" class="goto" data-target=".footer-sect">REDES SOCIALES</a>
+		</div>
+		<div class="wrapper-bx">
+		
+			<a class="click-nav" href="#">
+				<img src="img/menu-points.png" class="img-responsive click-nav-img" alt="menu-points.png" data-anijs="if: load, do: bounceInRight animated">
+				<img src="img/menu-points-b.png" class="img-responsive click-nav-img-b canvas" alt="menu-points-b.png" data-anijs="if: load, do: bounceInRight animated">
+			</a>
+			
+		
+			<section class="home-sect row">
+				<!--
+				<div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3 content_home-sect">
+					<img class="tk-logo img-responsive" src="img/tk-logo.png"  alt="tk-logo.png" data-anijs="if: load, do: fadeIn animated"/>
+				</div>
+				-->
+				<div class="easyhtml5video" style="position:relative;width: 100%;height: 100%;overflow: hidden;">
+                    <video class="videobg videobg-desktop hidden-xs" muted preload="auto" autoplay poster="img/bg-home.jpg" style="width:100%" loop>
+                        <!--<source src="index.files/html5video/VideoParaWebOriginal.m4v" type="video/mp4" />-->
+                        <source src="video/TKReelWeb.webm" type="video/webm" />
+                        <source src="video/TKReelWeb.ogv" type="video/gg" />
+                        <source src="video/TKReelWeb.mp4" type="video/mp4"/>
+                        <source src="video/TKReelWeb.m4v" type="video/m4v"/>
+                        <!--
+                        <object type="application/x-shockwave-flash" data="index.files/html5video/flashfox.swf" width="1024" height="576" style="position:relative;width:100%;height: 100%">
+                            <param name="movie" value="index.files/html5video/flashfox.swf" />
+                            <param name="allowFullScreen" value="true" />
+                            <param name="flashVars" value="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=true&amp;poster=index.files/html5video/VideoParaWebOriginal.jpg&amp;src=VideoParaWebOriginal.m4v" />
+                            <embed src="index.files/html5video/flashfox.swf" width="1024" height="576" style="position:relative;width:100%;height: 100%"  flashVars="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=true&amp;poster=index.files/html5video/VideoParaWebOriginal.jpg&amp;src=VideoParaWebOriginal.m4v"	allowFullScreen="true" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_en" />
+                            <img alt="VideoParaWebPageFishers" src="index.files/html5video/VideoParaWebOriginal.jpg" style="position:absolute;left:0;" width="100%" title="Video playback is not supported by your browser" />
+                        </object>
+                        -->
+                    </video>
+                    <video class="videobg videobg-mobile visible-xs" preload="auto" poster="img/bg-home.jpg" style="width:100%" loop>
+                        <!--<source src="index.files/html5video/VideoParaWebOriginal.m4v" type="video/mp4" />-->
+                        <source src="video/TKReelConAudio.webm" type="video/webm" />
+                        <source src="video/TKReelConAudio.ogv" type="video/gg" />
+                        <source src="video/TKReelConAudio.mp4" type="video/mp4"/>
+                        <source src="video/TKReelConAudio.m4v" type="video/m4v"/>
+                        <!--
+                        <object type="application/x-shockwave-flash" data="index.files/html5video/flashfox.swf" width="1024" height="576" style="position:relative;width:100%;height: 100%">
+                            <param name="movie" value="index.files/html5video/flashfox.swf" />
+                            <param name="allowFullScreen" value="true" />
+                            <param name="flashVars" value="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=true&amp;poster=index.files/html5video/VideoParaWebOriginal.jpg&amp;src=VideoParaWebOriginal.m4v" />
+                            <embed src="index.files/html5video/flashfox.swf" width="1024" height="576" style="position:relative;width:100%;height: 100%"  flashVars="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=true&amp;poster=index.files/html5video/VideoParaWebOriginal.jpg&amp;src=VideoParaWebOriginal.m4v"	allowFullScreen="true" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_en" />
+                            <img alt="VideoParaWebPageFishers" src="index.files/html5video/VideoParaWebOriginal.jpg" style="position:absolute;left:0;" width="100%" title="Video playback is not supported by your browser" />
+                        </object>
+                        -->
+                    </video>
+                    
+                    <script type="text/javascript">
+                        $(function(){
+                            $(window).resize(function(){
+                                $('.videobg').css({
+                                    height:$(window).height(),
+                                    width:($(window).height()*1.77)
+                                })
+                                //casos especiales
+                                if($('.videobg').outerWidth()<$(window).width() && $('.videobg').outerHeight()==$(window).height()){
+                                    //altura OK, ancho no suficiente, crezco en base al ancho
+                                    $('.videobg').css({
+                                        height:$(window).width()/1.77777,
+                                        width:($(window).width())
+                                    })
+                                }
+                                if($('.videobg').outerWidth()>$(window).width()){
+                                    //ancho video mayor que el ancho de la ventana, centrar
+                                    $('.videobg').css({
+                                        'margin-left':-(($('.videobg').outerWidth()-$(window).width())/2)
+                                    })
+                                }else{
+                                    //ancho video igual que de la ventana, sin centrar
+                                    $('.videobg').css({
+                                        'margin-left':0
+                                    })
+                                }
+                                if ((isMobile.AndroidTablet()) || !isMobile.any()) {
+					                //version full
+					                //window.location = "../";
+					                $('.overlayLogo').css('top',($('.home-sect').height()/4));
+					                $('.overlayPlay').hide();
+					            }else{
+                                	$('.overlayLogo').css('top','5%');
+                                	$('.overlayPlay').show();
+                                	if($('.tk-logo').height()>$('.videobg').height()/2){
+                                		$('.overlayPlay').css('top',$('.tk-logo').height());
+                                	}else{
+                                		$('.overlayPlay').css('top','50%');
+                                	}
+                                	
+                                }
+                                /*$('.overlayLogo').css('left',($(window).width()-$('.tk-logo').width())/2);*/
+                            });
+                            $(window).resize();
+                        });
+                    </script>
+                </div>
+                <div class="overlayLogo col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+                	<img class="tk-logo img-responsive" src="img/tk-logo.png"  alt="tk-logo.png" data-anijs="if: load, do: fadeIn animated"/>
+                </div>
+                <div class="overlayPlay col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+                	<img src="img/playbtn.png" class="playbtn img-responsive" width="64">
+                </div>
+			</section>
+			<!--
+			<div class="btn-group">
+			  <a class="dropdown-toggle click-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <img src="img/menu-points.png"  alt="menu-points.png" data-anijs="if: load, do: bounceInRight animated">
+			  </a>
+			  <ul class="dropdown-menu dropdown-menu-tk">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+			-->
+
+			<section class="welcome-sect row">
+				
+				<div class="col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-0 welcam-container">
+					<article class="welcam">
+						<h1>¡HOLA!</h1>
+						<p>Ven a experimentar una travesía gastronómica excepcional. Nuestra cocina es auténtica y une a la gente. Conecta la historia y las tradiciones en una atmósfera cálida y agradable.</p>
+					</article>
+				</div>
+				<div class="clearfix visible-xs"></div>
+				<div >	
+					<div class="col-sm-6 col-xs-12"  >
+						<img class="meat-img img-responsive" src="img/meat-slide.png" alt="" data-anijs="if: scroll, on: window, do: bounceInRight animated, before: scrollReveal"/>
+					</div>
+				</div>
+			</section>
+			<section class="historia-sect row">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+						  	<img class="img-responsive historia_image hidden-xs" src="img/HistoriaDesk-TK_01.jpg" alt="Historia1">
+						  	<img class="img-responsive historia_image-xs visible-xs" src="img/1.png" alt="Historia1">
+						  	<div class="carousel-caption-1 row hidden-xs">
+							    <div class="col-xs-6 col-xs-offset-3 col-sm-10 col-sm-offset-0 content_historia historia1">
+									<span class="texto-historias texto_gral parrafos_big">
+										<p>"CREEMOS EN EL MEDITADO CUIDADO DE TODOS LOS DETALLES..."</p>
+									</span>
+								</div>
+						  	</div>
+						</div>
+						<div class="item itemblackarrow">
+							<img class="img-responsive historia_image2 hidden-xs" src="img/Parte1.png" alt="Historia2">
+							<img class="img-responsive historia_image visible-xs" src="img/2.png" alt="Historia2">
+							<div class="carousel-caption-2 row">
+								<div class="col-xs-5 carousel-caption-2-1 texto-historias texto_gral parrafos_big">
+									TK Terraza Grill o Tecamacharlie’s (como antes se llamaba), nació en 1978 como parte de Grupo Anderson’s.
+								</div>
+								<!--
+								<div class="col-xs-3">
+									
+								</div>
+								-->
+								<div class="col-xs-5 col-xs-offset-1 texto-historias texto_gral parrafos_big carousel-caption-2-2">
+									Se decía que la gente de las Lomas no iba al mercado y por eso de forma chusca y con sentido del humor, empezó con una dulcería y una miscelánea.
+								</div>
+							</div>
+						</div>
+						<div class="item itemblackarrow">
+							<img class="img-responsive historia_image3 hidden-xs" src="img/Parte2.png" alt="Historia3">
+							<img class="img-responsive historia_image visible-xs" src="img/3.png" alt="Historia3">
+							<div class="carousel-caption-3 row">
+								<div class="col-xs-5 carousel-caption-3-1 texto-historias texto_gral  parrafos_big">
+									<span>
+										“Somos ‘amigos atendiendo amigos’,  desde el inicio el gran servicio siempre nos ha caracterizado. ”
+										<br><br>
+										-Roberto Alvarado,<br>
+										Director General 	
+									</span>
+								</div>
+								<div class="col-xs-5 col-xs-offset-1 texto-historias texto_gral carousel-caption-3-2 parrafos_big">
+									<span>
+										Con nuestro servicio más relajado, no solo buscamos que vengan a comer , queremos que nuestros clientes se desconecten y que tengan un momento diferente.
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="item itemblackarrow">
+							<img class="img-responsive historia_image4 hidden-xs" src="img/Parte3.png" alt="Historia4">
+							<img class="img-responsive historia_image visible-xs" src="img/4.png" alt="Historia4">
+							<div class="carousel-caption-4 row">
+								<div class="col-xs-5 carousel-caption-4-1 texto-historias texto_gral parrafos_big">
+									<span>
+										“Cada que se le caía una canasta en la cabeza a uno de nuestros clientes, lo tomábamos como señal de buena suerte y le regalábamos una botella para celebrar.”
+									</span>
+								</div>
+								<div class="col-xs-7 col-xs-offset-0 col-sm-5 col-sm-offset-1 texto-historias texto_gral carousel-caption-4-2 parrafos_big">
+									<span>
+										<p>Hoy, TK Terraza Grill. forma parte de una cadena exitosa de restaurantes llamada, Grupo Gastronómico Roal, reconocido en cocinas Europeas como Madrid y Londres.</p>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<!--
+							<span class="glyphicon glyphicon-chevron-left carousel-control-glyphs" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+							-->
+							<div class="carousel-control-glyphs">
+								<img class="historia-sect-left" src="img/last-historia.png"/>
+								<img class="historia-sect-left-b canvas" src="img/last-historia-b.png"/>
+							</div>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<!--<span class="glyphicon glyphicon-chevron-right carousel-control-glyphs" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+							-->
+							<div class="carousel-control-glyphs">
+								<img class="historia-sect-right" src="img/next-historia.png"/>
+								<img class="historia-sect-right-b canvas" src="img/next-historia-b.png"/>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="menu-sect">
+				<div class="row content_menu-sect">
+					<div class="row content_menu-sect_row">
+						<div class="col-xs-8 col-xs-offset-2 visible-xs texto_menu">
+							"CREEMOS EN EL MEDITADO"
+						</div>
+						<div class="clearfix visible-xs"></div>
+						<div class="col-xs-8 visible-xs col-xs-offset-2 texto_menu">
+							CUIDADO DE LOS DETALLES
+						</div>
+						<div class="col-xs-12 titulo_menu">
+							¿QUÉ TENEMOS EN NUESTRA COCINA?
+						</div>
+						<div class="col-xs-12 texto_menu">
+							<u><a href="TK_2016_INTERIOR.pdf" target="_blank" class="link_menu">CONOCE AQUÍ NUESTRO MENÚ</a></u>
+						</div>
+					</div>
+					<img class="img-responsive bg-menu-img hidden-xs" src="img/bg-cocina.png"/>
+					<img class="img-responsive bg-menu-img visible-xs" src="img/bg-cocina-xs.png"/>			
+				</div>
+				<div class="row floating-map">
+					<div class="col-sm-6 hidden-xs">
+						<a href="https://www.google.com.mx/maps/place/TK+Terraza+Grill/@19.4286369,-99.2260286,20.1z/data=!4m21!1m15!4m14!1m6!1m2!1s0x85d201875f37bb5f:0x504f65eda6ae9918!2sAvenida+de+las+Fuentes+41,+Lomas+de+Tecamachalco,+53950+Naucalpan+de+Ju%C3%A1rez,+M%C3%A9x.,+M%C3%A9xico!2m2!1d-99.2276039!2d19.4285351!1m6!1m2!1s0x85d201877e4d362d:0x81673e3687837a4b!2sFuente+de+Molinos+4,+Lomas+de+San+Isidro,+Naucalpan+de+Ju%C3%A1rez,+M%C3%A9x.!2m2!1d-99.2260839!2d19.4285806!3m4!1s0x0:0x42277a573656b0cb!8m2!3d19.4285085!4d-99.2254532" target="_blank">
+							<img class="map-tk img-responsive" src="img/map-contacto.png" alt="" data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal"/>
+						</a>
+					</div>
+					<div class="col-sm-6 col-xs-12 content_direccion">
+						<div class="row">
+							<div class="col-sm-4 col-sm-offset-4 col-xs-2 col-xs-offset-5">
+									<img class="img-responsive opentable_logo" src="img/ubicacion-icono.png"/>	
+							</div>
+							<div class="col-xs-12 text-center titulo_direccion">
+								<p>DIRECCIÓN</p>
+							</div>
+							<div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 text-center texto_direccion">
+								<p>Calle Fuente de Trevi 4, Lomas de Tecamachalco, 53950. Naucalpan de Juárez, Méx.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 visible-xs">
+						<a href="https://www.google.com.mx/maps/place/TK+Terraza+Grill/@19.4286369,-99.2260286,20.1z/data=!4m21!1m15!4m14!1m6!1m2!1s0x85d201875f37bb5f:0x504f65eda6ae9918!2sAvenida+de+las+Fuentes+41,+Lomas+de+Tecamachalco,+53950+Naucalpan+de+Ju%C3%A1rez,+M%C3%A9x.,+M%C3%A9xico!2m2!1d-99.2276039!2d19.4285351!1m6!1m2!1s0x85d201877e4d362d:0x81673e3687837a4b!2sFuente+de+Molinos+4,+Lomas+de+San+Isidro,+Naucalpan+de+Ju%C3%A1rez,+M%C3%A9x.!2m2!1d-99.2260839!2d19.4285806!3m4!1s0x0:0x42277a573656b0cb!8m2!3d19.4285085!4d-99.2254532" target="_blank">
+							<img class="map-tk-xs img-responsive" src="img/map-contacto-xs.png" alt="" data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal"/>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="location-sect">
+				
+			</section>
+			<section class="horarios-sect">
+				<div class="row content_horarios-sect">
+					<div class="col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10 horarios">
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 titulo_horarios" style="color: #95070b;">
+								NUESTROS HORARIOS
+							</div>
+							<div class="col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3 text-left">
+								Lunes
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 24:00 hrs
+							</div>
+							<div class="col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3 text-left">
+								Martes
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 24:00 hrs
+							</div>
+							<div class="col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3 text-left">
+								Miércoles
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 24:00 hrs
+							</div>
+							<div class="col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3 text-left">
+								Jueves
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 01:00 hrs
+							</div>
+							<div class="col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3 text-left">
+								Viernes
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 01:00 hrs
+							</div>
+							<div class="col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3 text-left">
+								Sábado
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 01:00 hrs
+							</div>
+							<div class="col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3 text-left">
+								Domingo
+							</div>
+							<div class="col-sm-6 col-xs-6 text-left">
+								13:00 - 19:00 hrs
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 hidden-xs">
+						<img class="img-responsive img_horarios" src="img/bg-horarios.png"/>	
+					</div>
+				</div>
+			</section>
+			<section class="open-sect">
+				<div class="row content_open-sect">
+					<div class="col-xs-12 titulo_horarios">
+						<p>RESERVACIONES</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 texto_reservacion">
+						<p><a href="tel:05215552930121" class="numero_telefono">55 52 93 0121</a></p>
+					</div>
+					<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 content_widget_open">
+						<script type='text/javascript' src='//www.opentable.com.mx/widget/reservation/loader?rid=100075&domain=commx&type=standard&theme=standard&lang=es&overlay=true&iframe=false'></script>
+					</div>
+					
+				</div>
+			</section>
+			<section class="contact-sect">
+				<div class="content_contact-sect">
+					<div class="formulario1">
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3 text text-center titulo_gral btn_enviar_mensaje_box">
+								<p><h1><span class="numeracion-contacto titulo_gral">PONTE EN CONTACTO</span></h1></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3 text-center texto_gral btn_enviar_mensaje_box">
+								<p>
+									En Tk Terraza Grill nos caracterizamos por ser tus amigos.<br>
+									¿Nos quieres mandar un mensaje?
+								</p>
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-6 col-xs-offset-3 text-center texto_gral btn_enviar_mensaje_box">
+								<a class="btn btn-default btn_enviar_mensaje btn_form"  role="button">
+									ENVIAR UN MENSAJE
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="formulario2">
+						<div class="row">
+							<div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario">
+											<span class="numeracion-contacto">
+												1.
+											</span> 
+											¿Cual es tu nombre?
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 text-left texto_gral">
+								<p>
+									El mío es TK.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<p>
+									<h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></h2>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8 col-xs-offset-1 col-sm-6 col-sm-offset-1">
+								<input id="form_nombre" type="text" name="nombre_form">
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-2 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_form btn_ok" href="#" role="button">
+									OK
+								</a>
+							</div>
+							<div class="col-xs-5 col-xs-offset-2">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button" disabled="disabled">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+								<a class="flechas-contacto btn_form btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="formulario3">
+						<div class="row">
+							<div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario">
+											<span class="numeracion-contacto">
+												2.
+											</span> 
+											¿Que email prefieres usar para estar en contacto, <span class="nombre_form_sub">visitante</span>?*
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 text-left texto_gral">
+								<p>
+									Usaré esto para estar en contacto contigo, no para bombardearte con newsletters.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<p>
+									<h2><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></h2>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 text-left">
+								<input id="form_mail" type="email" name="email_form">
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-2 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_form btn_ok" href="#" role="button">
+									OK
+								</a>
+							</div>
+							<div class="col-xs-5 col-xs-offset-2">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+								<a class="flechas-contacto btn_form btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!--
+					<div class="formulario4">
+						<div class="row">
+							<div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario">
+											<span class="numeracion-contacto">
+												3.
+											</span> 
+											¿Sobre que trata tu mensaje?
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 text-left texto_gral">
+								<p>
+									Piensalo como si fuera el asunto de un correo.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 text-left texto_gral">
+								<select id="form_asunto" multiple class="form-control">
+								  <option value="Feedback">Tengo feedback que quiero darles</option>
+								  <option value='Sugerencia'>Sugerencias sobre su carta</option>
+								  <option value="Mejoras">Cosas que podrían mejorar</option>
+								</select>
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-2 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_form btn_ok" href="#" role="button">
+									OK
+								</a>
+							</div>
+							<div class="col-xs-5 col-xs-offset-2">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+								<a class="flechas-contacto btn_form btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					-->
+					<div class="formulario5">
+						<div class="row">
+							<div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-1 text text-left">
+								<p>
+									<h4>
+										<span class="titulo_formulario">
+											<span class="numeracion-contacto">
+												3.
+											</span> 
+											¿Bueno y cual es tu mensaje?
+										</span>
+									</h4>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 text-left texto_gral">
+								<p>
+									Yo prefiero los mensajes directos, ¡Dispara!
+								</p>
+							</div>
+						</div>
+						<div class="row hidden-xs">
+							<div class="col-xs-6 col-xs-offset-1 text-left">
+								<p>
+									<h2><span class="glyphicon glyphicon-print" aria-hidden="true"></span></h2>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 text-left">
+								<textarea id="form_mensaje" class="form-control" rows="3"></textarea>
+							</div>
+						</div>
+						<div class="row box-btn_form_contacto">
+							<div class="col-xs-3 col-xs-offset-1 texto_gral">
+								<a class="btn btn-default btn_enviar_mensaje btn_form" href="#" role="button">
+									¡Enviar! <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+								</a>
+							</div>
+							<div class="col-xs-4 col-xs-offset-3">
+								<a class="flechas-contacto btn_form_back btn" href="#" role="button">
+									<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+								</a>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</section>
+			<section class="footer-sect">
+				<!--Logos más pequeños
+				<div class="row content_redes-sect">
+					<div class="col-xs-4">
+						<div class="col-sm-4 col-sm-offset-8 col-xs-6 col-xs-offset-3">
+							<a target="_blank" href="#">
+									<img class="img-responsive" src="img/tw-ico.png"/>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+							<a target="_blank" href="#">
+								<img class="img-responsive" src="img/fb-ico.png"/>
+							</a>
+						</div>				
+					</div>
+					<div  class="col-xs-4">
+						<div class="col-sm-4 col-xs-6 col-xs-offset-3">
+							<a target="_blank" href="#">
+								<img class="img-responsive" src="img/ig-ico.png"/>
+							</a>
+						</div>
+					</div>
+				</div>
+				-->
+				<div class="row content_redes-sect">
+					<div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3">
+						<div class="row">
+							<div class="col-xs-4">
+									<a target="_blank" href="https://twitter.com/tkterrazagrill">
+											<img class="img-responsive opentable_logo" src="img/tw-ico.png"/>
+									</a>
+							</div>
+							<div class="col-xs-4">
+									<a target="_blank" href="https://www.facebook.com/TK-Terraza-Grill-295846400588144">
+										<img class="img-responsive opentable_logo" src="img/fb-ico.png"/>
+									</a>			
+							</div>
+							<div  class="col-xs-4">
+									<a target="_blank" href="https://www.instagram.com/tk_terrazagrill">
+										<img class="img-responsive opentable_logo" src="img/ig-ico.png"/>
+									</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content_footer2-sect text-center texto_gral">
+					<div class="row">
+						<div class="col-xs-12">
+							<ul>
+								<li>
+									<h4>
+										<a href="http://www.carlitosgrillandgarden.com" target="_blank" class="texto_gral">
+											CARLITOS GRILL &#38; GARDEN 
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="https://www.facebook.com/pg/SF-Shakers-Ixtapa-339420766184433/about/?ref=page_internal" target="_blank" class="texto_gral">
+											SF SHAKERS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="http://lacocinadeltras.com" target="_blank" class="texto_gral">
+											LA COCINA DE EL TRAS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="http://mestizomx.com" target="_blank" class="last_li texto_gral">
+											MESTIZO	
+										</a>
+									</h4>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-6 col-xs-offset-3 text-center">
+								<div class="row">
+									<div class="col-xs-6 col-xs-offset-3">
+										<img class="img-responsive opentable_logo" src="img/logo-open-table.png"/>
+									</div>
+								</div>
+								
+						</div>	
+					</div>
+					<div class="row texto_gral">
+						<div class="col-xs-8 col-xs-offset-2 text-center footer_text texto_gral">
+							<br>GRUPO GASTONÓMICO ROAL &reg;
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--
+			<section class="footer2-sect">
+				<div class="content_footer2-sect text-center">
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1">
+							<ul>
+								<li>
+									<h4>
+										<a href="#" target="_blank">
+											CARLITOS GRILL	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank">
+											SF SHAKERS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank">
+											LA COCINA DE EL TRAS	
+										</a>
+									</h4>
+								</li>
+								<li>
+									<h4>
+										<a href="#" target="_blank" class="last_li">
+											MESTIZO	
+										</a>
+									</h4>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-6 col-xs-offset-3 text-center">
+								<img class="img-responsive opentable_logo" src="img/logo-open-table.png"/>
+						</div>	
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-xs-offset-3 text-center">
+							<br>GRUPO GASTONÓMICO ROYAL &reg;
+						</div>
+					</div>
+				</div>
+			</section>
+			-->
+		</div>
+		<!--<img src="/img/bg-home.jpg"  alt="bg-home.jpg">
+		<img src="/img/menu-points.png"  alt="menu-points.png">
+		<img src="/img/close-nav.png"  alt="close-nav.png">
+		<img src="/img/tk-logo.png"  alt="tk-logo.png">
+		
+		<img src="/img/bg-historia.jpg"  alt="bg-historia.jpg">
+		<img src="/img/next-historia.png"  alt="next-historia.png">
+		<img src="/img/last-historia.png"  alt="last-historia.png">
+		
+		<img src="/img/map-contacto.png"  alt="map-contacto.png">
+		
+		<img src="/img/ubicacion-icono.png"  alt="ubicacion-icono.png">
+		
+		<img src="/img/bg-horarios.png"  alt="bg-horarios.png">
+		
+		<img src="/img/tw-ico.png"  alt="tw-ico.png">
+		<img src="/img/fb-ico.png"  alt="fb-ico.png">
+		<img src="/img/ig-ico.png"  alt="ig-ico.png">
+		
+		<img src="/img/logo-open-table.png"  alt="logo-open-table.png">
+		<img src="/img/chalkboard-ubicacion.png"  alt="chalkboard-ubicacion.png">
+		
+		<img src="/img/bg-footer.png"  alt="bg-footer.png">-->
+		
+		
+		
+		
+		<!-- MODALS - ALERTS - DROP DOWNS-->
+		<!--[if IE]>
+			<script src="js/html5.js"></script>
+			<script type="text/javascript" src="js/respond.js"></script>
+		<![endif]-->
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/dev.js"></script>
+		<!-- Scripts-->
+		<script src="js/anijs/anijs.js"></script>
+    	<script src="js/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
+		<!--<script src="js/init.config.js"></script>
+		<script src="js/init.js"></script>-->
+		<!--INTERNET CHECK-->
+		<!--PERFIL-->
+		<!--<script src="js/web.js"></script>-->
+		<script>
+			jQuery(function() {
+		  	
+		  		
+				
+		  	});
+		</script>
+	</body>
+
+</html>
